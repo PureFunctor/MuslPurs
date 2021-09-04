@@ -26,4 +26,4 @@ ENV PATH="/root/.local/bin:${PATH}"
 RUN stack update
 RUN git clone https://github.com/purescript/purescript
 RUN cd purescript && git checkout v0.14.4 && stack install --system-ghc --flag purescript:RELEASE
-ENTRYPOINT ["which", "purs"]
+ENTRYPOINT ["ldd", "/root/.local/bin/purs"]
