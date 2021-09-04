@@ -6,6 +6,5 @@ RUN curl -sSL https://get.haskellstack.org/ | bash
 ENV PATH="/root/.local/bin:${PATH}"
 RUN stack update
 RUN stack unpack purescript
-RUN cd purescript-0.14.4
-RUN stack install --flag purescript:RELEASE
+RUN cd purescript-0.14.4 && stack install --flag purescript:RELEASE
 ENTRYPOINT ["which", "purescript"]
