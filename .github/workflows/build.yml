@@ -17,7 +17,3 @@ jobs:
     - name: Build Container
       run: |
         docker build . -t purs:musl
-
-    - name: Run Container
-      run: |
-        docker run -t 'purs:musl'
